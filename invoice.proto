@@ -1,0 +1,12 @@
+message LineItem {
+  string SKU = 1
+  int64 quantity = 2
+  int64 price = 3
+}
+
+message InvoiceRequest {
+  string ID = 1
+  google.protobug.Timestamp Time = 2 
+  string customer = 3
+  repeated LineItem items = 4
+}
